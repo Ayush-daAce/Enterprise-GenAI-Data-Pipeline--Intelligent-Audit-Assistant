@@ -32,6 +32,7 @@ This project simulates a modern enterprise data workflow, moving from raw cloud 
 6. Process the data
    ```bash
    python data_prep.py
+   
    and build the local FAISS vector index:
     ```bash
     python build_vector_db.py
