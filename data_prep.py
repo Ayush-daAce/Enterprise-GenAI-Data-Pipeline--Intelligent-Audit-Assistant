@@ -3,7 +3,7 @@ import pandas as pd
 from azure.storage.blob import BlobServiceClient
 
 # --- 1. DOWNLOAD RAW DATA FROM AZURE ---
-AZURE_CONNECTION_STRING = "DefaultEndpointsProtocol=https;AccountName=ayushgenai;AccountKey=pBgwLfRbp1SVxd/tHM65HMDcYCkT54SEuhLmirR5m6IcIQ/gAdSNJ0YpbNNV/q16G38V+FuxyS/x+AStj2wV7Q==;EndpointSuffix=core.windows.net"
+AZURE_CONNECTION_STRING = "DefaultEndpointsProtocol=YOUR AZURE CONNECTION ACCESS KEY HERE"
 CONTAINER_NAME = "audit-log-raw"
 FILE_NAME = "business_audit_logs.csv"
 DOWNLOAD_PATH = "downloaded_audit_logs.csv"
@@ -41,5 +41,6 @@ OUTPUT_FILE = "cleaned_llm_data.txt"
 with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
     for item in df_clean["LLM_Context"]:
         f.write(f"{item}\n\n")
+
 
 print(f"Success! Data transformed and saved to '{OUTPUT_FILE}'.")
