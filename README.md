@@ -22,20 +22,25 @@ This project simulates a modern enterprise data workflow, moving from raw cloud 
 ## 🚀 How to Run Locally
 
 1. Clone the repository.
+   
 2. Install dependencies:
    ```bash
    pip install -r requirements.txt
+   
 3. Add your Groq API key to your environment variables.
+   
 4. Generate the dataset and upload to Azure (requires an Azure Storage connection string):
     ```bash
     python upload_to_azure.py
-6. Process the data
+    
+5. Process the data
    ```bash
    python data_prep.py
-   
-   and build the local FAISS vector index:
+
+6.and build the local FAISS vector index:
     ```bash
     python build_vector_db.py
-8. Launch the AI Audit Assistant interactive chat:
+    
+7. Launch the AI Audit Assistant interactive chat:
     ```bash
     python rag_chatbot.py
